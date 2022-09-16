@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding-top: 1em;
+
+  flex-direction: row;
+  justify-content: space-between;
+  
+  color: white;
+  z-index: 2;
+
+  font-size: 0.8em;
+  font-stretch: condensed;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  transition: color 1s, fill 1s;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  height: 4em;
+  margin-left: 6em;
+  pointer-events: none;
+}
+
+.menu {
+  margin-right: 3em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-self: start;
+}
+
+.menu > * {
+  margin-left: 1.5em;
+  padding-bottom: .25em;
+}
+
+.search {
+  margin-left: 0;
+  font-weight: 400;
+  padding-right: 2.5em;
+  border-bottom: solid 1px;
+}

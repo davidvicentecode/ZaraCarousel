@@ -1,0 +1,70 @@
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    transition: transform 1.5s cubic-bezier(.16,.6,.2,1);
+}
+
+
+/* Slider Arrows */
+
+.slider-arrow-left, .slider-arrow-right {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+
+    font-size: 0.8em;
+    font-stretch: condensed;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.slider-arrow-left {
+    left: 2em;
+}
+
+.slider-arrow-right {
+    right: 2em;
+}
+
+.slider-arrow-left::before, .slider-arrow-right::after {
+    content: '';
+    display: inline-block;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+    padding: 0.3em;
+    border: solid;
+    border-width: 0 1px 1px 0;
+
+    transition: transform 1s;
+}
+
+.slider-arrow-left::before {
+    transform: rotate(135deg);
+}
+
+.slider-arrow-right::after {
+    transform: rotate(-45deg);
+}
+
+.slider-arrow-left:hover::before {
+    transform: rotate(135deg) translateX(0.3em) translateY(0.3em);
+}
+
+.slider-arrow-right:hover::after {
+    transform: rotate(-45deg) translateX(0.3em) translateY(0.3em);
+}
+
+.slider-arrow-hide {
+    visibility: hidden;
+}
